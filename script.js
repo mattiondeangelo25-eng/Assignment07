@@ -1,5 +1,8 @@
 console.log("Hello World!");
 // 1. Create an array called favoriteFoods with at least 6 foods you love.
+const favoriteFoods = ["Ramen", "Sushi", "Tacos", "Pizza", "Burgers", "Ice Cream"];
+
+console.log("--- My Favorite Foods List ---");
 
 
 
