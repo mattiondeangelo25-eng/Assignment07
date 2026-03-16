@@ -32,12 +32,19 @@ favoriteFoods.forEach((food, index) => {
     // "Have you ever tried ____?"
     // "I always recommend ____ to friends."
     // "Trust me — ____ is delicious."
-
+function printFoodRecommendation(foodName) {
+    console.log(`Have you ever tried ${foodName}?`);
+    console.log(`I always recommend ${foodName} to friends.`);
+    console.log(`Trust me — ${foodName} is delicious.`);
+    console.log("---------------------------------"); // Separator for readability
+}
 
 
 
 // 4b. Call the function at least 3 times
-
+printFoodRecommendation("Ramen");
+printFoodRecommendation("Tacos");
+printFoodRecommendation("Ice Cream");
 
 
 // Here's a list of 50 friends' favorite foods:
@@ -50,20 +57,35 @@ let friendFavorites = [
 
 
 // 6. Store the result in an array called foodsWithA. Print out the array.
+let foodsWithA = friendFavorites.filter(food => food.toLowerCase().includes('a'));
 
+console.log("Foods containing 'a' (printed from array):");
+console.log(foodsWithA);
 
 
 // 7. Create a new array longFoodNames for foods with names longer than 6 characters.
-
+let longFoodNames = friendFavorites.filter(food => food.length > 6);
 
 
 // 8. Create another array shortFoodNames for foods 6 characters or shorter.
-
+let shortFoodNames = friendFavorites.filter(food => food.length <= 6);
 
 
 // 9. Print both arrays and compare:
 // "There are more long-named foods." OR "There are more short-named foods."
+console.log("\n--- 7, 8 & 9. Food Name Length Comparison ---");
+console.log("Long food names (longer than 6 chars):");
+console.log(longFoodNames);
+console.log("\nShort food names (6 chars or shorter):");
+console.log(shortFoodNames);
+
+console.log(`\nThere are ${longFoodNames.length} long food names and ${shortFoodNames.length} short food names.`);
 
 
 // 10. STRETCH: Find the longest food name and print:
 // "The longest food name in the list is ______ with ___ characters."
+let longestFoodName = friendFavorites.reduce((longest, current) => {
+    return current.length > longest.length ? current : longest;
+}, "");
+
+console.log(`\nThe longest food name in the list is ${longestFoodName} with ${longestFoodName.length} characters.`);
