@@ -53,6 +53,14 @@ let friendFavorites = [
   ];
 
 // 5. Print out only foods that have an "a" in the name. For example, "Pizza" would not be included, but "Donuts" would be.
+console.log("\n--- 5. Friends' Favorite Foods with an 'a' ---");
+friendFavorites.forEach(food => {
+  // The includes() method is used to check if the string contains the letter "a".
+  if (food.toLowerCase().includes('a')) {
+    console.log(food);
+  }
+});
+
 
 
 
