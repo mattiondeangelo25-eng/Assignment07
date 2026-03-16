@@ -7,7 +7,11 @@ console.log("--- My Favorite Foods List ---");
 
 
 // 2. Loop through the list and print: "One of my favorite foods is ______."
+favoriteFoods.forEach(food => {
+    console.log(`One of my favorite foods is ${food}.`);
+});
 
+console.log("\n--- My Favorite Foods, Ranked ---");
 
 
 
@@ -16,7 +20,10 @@ console.log("--- My Favorite Foods List ---");
 // "My #1 favorite food is Ramen" (copy/paste for all items)
 // "My #2 favorite food is Sushi"
 // ...etc.
-
+favoriteFoods.forEach((food, index) => {
+    const ranking = index + 1;
+    console.log(`My #${ranking} favorite food is ${food}`);
+});
 
 
 
